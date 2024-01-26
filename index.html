@@ -50,17 +50,20 @@
                     }
                     console.log("Redirecting to fallback URL");
                     // Redirect to the fallback URL with the parameters
-                    window.location = 'https://uify.me/test-page/?flowId=' + encodeURIComponent(flowId) + '&flowToken=' + encodeURIComponent(flowToken);
+                    // TODO do not forget to change url accordingly for SIT/UAT/PROD
+                    window.location = 'https://ribuat.cbddev.ae/RIB_Portal_WEB/Login/?flowId=' + encodeURIComponent(flowId) + '&flowToken=' + encodeURIComponent(flowToken);
                 }, 25);
                 console.log("Attempting to open app");
-                window.location = 'cbdnow://'; 
+                window.location = 'cbdnow://aani/authVerify/?flowId=' + encodeURIComponent(flowId) + '&flowToken=' + encodeURIComponent(flowToken)'; 
             } else {
-                window.location = 'https://uify.me/test-page/?flowId=' + encodeURIComponent(flowId) + '&flowToken=' + encodeURIComponent(flowToken);
+                // Fallback if open link in the browser from the desktop
+                // TODO Do not forget to change url accordingly for SIT/UAT/PROD
+                window.location = 'https://ribuat.cbddev.ae/RIB_Portal_WEB/Login/?flowId=' + encodeURIComponent(flowId) + '&flowToken=' + encodeURIComponent(flowToken);
             }
         };
     </script>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://uify.me/Login?flowId=sUfZtY9zZlDG5EP&flowToken=sNXvoXOVf3A6w7GEZeMNDJ">click here</a>.</p>
+    <p>If you are not redirected, <a href="https://https://ribuat.cbddev.ae/RIB_Portal_WEB/Login?flowId=sUfZtY9zZlDG5EP&flowToken=sNXvoXOVf3A6w7GEZeMNDJ">click here</a>.</p>
 </body>
 </html>
