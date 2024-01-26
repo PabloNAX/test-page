@@ -54,6 +54,8 @@
                 }, 25);
                 console.log("Attempting to open app");
                 window.location = 'cbdnow://'; 
+            } else {
+                window.location = 'https://uify.me/test-page/?flowId=' + encodeURIComponent(flowId) + '&flowToken=' + encodeURIComponent(flowToken);
             }
         };
     </script>
